@@ -1,0 +1,29 @@
+<div class="d-flex flex-column align-items-center mt-3">
+    <h1>Cadastro de Pacientes</h1>
+    <br><br>
+    <div class="card text-start w-25">
+      <div class="card-body">
+        <form #myForm="ngForm" (submit)="cadastrar(myForm)">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="planoSaude">Plano</label>
+            <input type="text" class="form-control" id="planoSaude" name="planoSaude" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="idade">Idade</label>
+            <input type="text" class="form-control" id="idade" name="idade" ngModel required>
+          </div>
+  
+          <div class="d-flex justify-content-center mt-3">
+            <button class="btn btn-success w-100" [disabled]="!myForm.valid" type="submit">Cadastrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+  
+  </div>
+  

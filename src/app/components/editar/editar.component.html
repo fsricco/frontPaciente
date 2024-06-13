@@ -1,0 +1,36 @@
+<div class="d-flex flex-column align-items-center mt-3">
+    <h1>Editar Pacientes</h1>
+    <br><br>
+    <div class="card text-start w-25">
+      <div class="card-body pb-0">
+  
+        <div class="form-group gap-3">
+          <label for="modelo">Pesquisar por ID</label>
+          <div class="d-flex gap-2">
+            <input type="text" class="form-control" name="search" id="search" [(ngModel)]="searchText">
+            <button class="btn btn-dark" (click)="search()">Pesquisar</button>
+          </div>
+        </div>
+  
+        <form class="mt-5" #myForm="ngForm" (submit)="editar(myForm)">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="nome" required>
+          </div>
+          <div class="form-group">
+            <label for="planoSaude">Plano</label>
+            <input type="text" class="form-control" id="planoSaude" name="planoSaude" [(ngModel)]="planoSaude" required>
+          </div>
+          <div class="form-group">
+            <label for="idade">Idade</label>
+            <input type="text" class="form-control" id="idade" name="idade" [(ngModel)]="idade" required>
+          </div>
+          <div class="d-flex justify-content-center my-3">
+            <button class="btn btn-success w-100" [disabled]="!myForm.valid" type="submit">Atualizar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  

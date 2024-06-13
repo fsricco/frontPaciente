@@ -1,0 +1,12 @@
+<div class="d-flex flex-column align-items-center mt-4">
+    <h1>Lista de Pacientes</h1>
+    <br><br>
+    <ul class="list-group" style="width: 50%;">
+    <li class="list-group-item" *ngFor="let item of pacientes">
+        <button (click)="excluirPaciente(item)" class="btn btn-danger btn-sm">Excluir</button>
+        <a >
+        {{ " - " + item.nome }} - ({{ item.idade }}) - {{ item.planoSaude }} - Porcentagem: {{ +item.idade > 60 ? '15%' : '3%' }} - ID: {{ item._id }}
+        </a>
+    </li>
+    </ul>
+</div>
