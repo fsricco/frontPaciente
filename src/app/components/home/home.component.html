@@ -5,7 +5,7 @@
     <li class="list-group-item" *ngFor="let item of pacientes">
         <button (click)="excluirPaciente(item)" class="btn btn-danger btn-sm">Excluir</button>
         <a >
-        {{ " - " + item.nome }} - ({{ item.idade }}) - {{ item.planoSaude }} - Porcentagem: {{ +item.idade > 60 ? '15%' : '3%' }} - ID: {{ item._id }}
+        {{ " - " + item.nome }} - (Idade: {{ item.idade }}) - {{ item.planoSaude }} - Porcentagem: {{ +item.idade > 60 ? '15%' : '3%' }} - ID: {{ item._id }}
         </a>
     </li>
     </ul>
